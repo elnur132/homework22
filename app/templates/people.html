@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% load custom_filters %}
+<body>
+    <a href="{% url 'create-people' %}">add person</a>
+    {% for person in people %}
+    <p>{{person.name|uglify}}</p>
+    {% endfor %}
+</body>
+</html>
